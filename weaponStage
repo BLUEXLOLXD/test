@@ -1,0 +1,16 @@
+local weaponStage = "One"
+
+local function Openweapon()
+    local quinque = player:FindFirstChild("Quinque")
+    if not quinque then
+       game.Players.LocalPlayer.Character.Remotes.KeyEvent:FireServer(args, weaponStage, "Down", CFrame.new(), CFrame.new())
+    else
+       print("Quinque is Opening")
+    end
+end
+
+-- เปลี่ยนค่า weaponStage ใน Global Environment โดยใช้ getgenv()
+getgenv().weaponStage = "Two"
+
+-- เรียกใช้งานฟังก์ชัน Openweapon()
+Openweapon()
