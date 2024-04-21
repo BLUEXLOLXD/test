@@ -3,7 +3,7 @@ local args = "\230\147\141\228\189\160\240\159\146\166\240\159\146\148\240\159\1
 local weaponStage = "One"
 
 local function Openweapon()
-    local quinque = player:FindFirstChild("Quinque")
+    local quinque = player.Character:FindFirstChild("Quinque")
     if not quinque then
        game.Players.LocalPlayer.Character.Remotes.KeyEvent:FireServer(args, weaponStage, "Down", CFrame.new(), CFrame.new())
     else
