@@ -11,8 +11,4 @@ local function Openweapon()
     end
 end
 
--- เปลี่ยนค่า weaponStage ใน Global Environment โดยใช้ getgenv()
-getgenv().weaponStage = "Two"
-
--- เรียกใช้งานฟังก์ชัน Openweapon()
 Openweapon()
